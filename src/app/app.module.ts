@@ -10,6 +10,7 @@ import {ProductComponent} from './product/product.component';
 import {ProductFilterPipe} from './product/product-filter.pipe';
 import {AlertifyService} from "./services/alertify.service";
 import {HttpClientModule} from "@angular/common/http";
+import {CategoryService} from "./services/category.service";
 
 
 @NgModule({
@@ -26,7 +27,7 @@ import {HttpClientModule} from "@angular/common/http";
     FormsModule,
     HttpClientModule
   ],
-  providers: [AlertifyService],
+  providers: [AlertifyService, CategoryService],
   bootstrap: [AppComponent]
 })
 export class AppModule {
