@@ -1,10 +1,60 @@
-<app-nav></app-nav>
-<div class="row">
-  <div class="col-md-3">
-    <app-category></app-category>
+<body>
+<script type="text/javascript"
+        src="https://www.gstatic.com/_/translate_http/_/js/k=translate_http.tr.tr.CxRkRfVDVwE.O/d=1/exm=ajaxproxy,el_conf/ed=1/rs=AN8SPfq_prlRq5fJ5jCDq_9MfyuO_Jm09Q/m=navigationui"
+        data-environment="prod" data-proxy-url="https://getbootstrap-com.translate.goog"
+        data-proxy-full-url="https://getbootstrap-com.translate.goog/docs/5.2/examples/dashboard/?_x_tr_sl=en&amp;_x_tr_tl=tr&amp;_x_tr_hl=tr&amp;_x_tr_pto=sc"
+        data-source-url="https://getbootstrap.com/docs/5.2/examples/dashboard/" data-source-language="en"
+        data-target-language="tr" data-display-language="tr" data-detected-source-language=""
+        data-is-source-untranslated="false"
+        data-source-untranslated-url="https://translate.google.com/website?sl=en&amp;tl=tr&amp;hl=tr&amp;prev=search&amp;u=https://getbootstrap.com/docs/5.2/examples/dashboard/&amp;anno=2"></script>
+<header class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
+  <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3 fs-6"
+     href="https://getbootstrap-com.translate.goog/docs/5.2/examples/dashboard/?_x_tr_sl=en&amp;_x_tr_tl=tr&amp;_x_tr_hl=tr&amp;_x_tr_pto=sc#">E-Ticaret App</a>
+  <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-bs-toggle="collapse"
+          data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false"
+          aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+  <div class="navbar-nav">
+    <div class="nav-item text-nowrap">
+      <a class="nav-link px-3"
+         href="https://getbootstrap-com.translate.goog/docs/5.2/examples/dashboard/?_x_tr_sl=en&amp;_x_tr_tl=tr&amp;_x_tr_hl=tr&amp;_x_tr_pto=sc#">Sign
+        out</a>
+    </div>
   </div>
-  <div class="col-md-9">
-    <app-product></app-product>
+</header>
+<div class="container-fluid">
+  <div class="row">
+    <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
+      <div class="position-sticky pt-3">
+        <ul class="nav flex-column">
+          <li class="nav-item"><a class="nav-link active" routerLink="/products">
+            <span data-feather="home" class="align-text-bottom"></span> Mağaza </a></li>
+          <li class="nav-item"><a class="nav-link" routerLink="/products/product-add-1"><span data-feather="file" class="align-text-bottom"></span>Ürün Ekle / Klasik Form</a></li>
+          <li class="nav-item"><a class="nav-link" routerLink="/products/product-add-2"><span data-feather="shopping-cart" class="align-text-bottom"></span> Ürün Ekle / Reactive Forms </a></li>
+          <li class="nav-item"><a class="nav-link"><span data-feather="users" class="align-text-bottom"></span> Customers </a></li>
+          <li class="nav-item"><a class="nav-link"><span data-feather="bar-chart-2" class="align-text-bottom"></span> Reports </a></li>
+          <li class="nav-item"><a class="nav-link"><span data-feather="layers" class="align-text-bottom"></span> Integrations </a></li>
+        </ul>
+        <h6
+          class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted text-uppercase">
+          <span>Saved reports</span> <a class="link-secondary" href="https://getbootstrap-com.translate.goog/docs/5.2/examples/dashboard/?_x_tr_sl=en&amp;_x_tr_tl=tr&amp;_x_tr_hl=tr&amp;_x_tr_pto=sc#"
+            aria-label="Add a new report"> <span data-feather="plus-circle" class="align-text-bottom"></span> </a></h6>
+        <ul class="nav flex-column mb-2">
+          <li class="nav-item"><a class="nav-link" href="https://getbootstrap-com.translate.goog/docs/5.2/examples/dashboard/?_x_tr_sl=en&amp;_x_tr_tl=tr&amp;_x_tr_hl=tr&amp;_x_tr_pto=sc#">
+            <span data-feather="file-text" class="align-text-bottom"></span> Current month </a></li>
+          <li class="nav-item"><a class="nav-link" href="https://getbootstrap-com.translate.goog/docs/5.2/examples/dashboard/?_x_tr_sl=en&amp;_x_tr_tl=tr&amp;_x_tr_hl=tr&amp;_x_tr_pto=sc#">
+            <span data-feather="file-text" class="align-text-bottom"></span> Last quarter </a></li>
+          <li class="nav-item"><a class="nav-link" href="https://getbootstrap-com.translate.goog/docs/5.2/examples/dashboard/?_x_tr_sl=en&amp;_x_tr_tl=tr&amp;_x_tr_hl=tr&amp;_x_tr_pto=sc#">
+            <span data-feather="file-text" class="align-text-bottom"></span> Social engagement </a></li>
+          <li class="nav-item"><a class="nav-link" href="https://getbootstrap-com.translate.goog/docs/5.2/examples/dashboard/?_x_tr_sl=en&amp;_x_tr_tl=tr&amp;_x_tr_hl=tr&amp;_x_tr_pto=sc#">
+            <span data-feather="file-text" class="align-text-bottom"></span> Year-end sale </a></li>
+        </ul>
+      </div>
+    </nav>
+    <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+      <router-outlet></router-outlet>
+    </main>
   </div>
 </div>
-<router-outlet></router-outlet>
+</body>
+
+

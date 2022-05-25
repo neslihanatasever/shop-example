@@ -9,23 +9,30 @@ import {tap, catchError} from "rxjs/operators";
 export class ProductService {
 
   constructor(
-    private http: HttpClient) {}
+    private http: HttpClient) {
+  }
+
   path = "http://localhost:3000/products"
 
-  getProducts(): Observable<Product[]> {
-    return this.http
-      .get<Product[]>(this.path).pipe(
-        tap(data => console.log(JSON.stringify(data))),
-        catchError(this.handleError)
-      );
+  getProducts(categoryId: number): Observable<Product[]> {
+
+    let newPath = this.path;
+    if (categoryId) {
+      newPath = newPath + "?categoryId=" + categoryId
+    }
+
+    return this.http.get<Product[]>(newPath).pipe(
+      tap(data => console.log(JSON.stringify(data))),
+      catchError(this.handleError)
+    );
   }
 
   handleError(err: HttpErrorResponse) {
-    let errorMessage =''
+    let errorMessage = ''
     if (err.error instanceof ErrorEvent) {
-      errorMessage='Bir hata oluştu' +err.error.message
-    }else{
-      errorMessage='Sistemsel bir hata'
+      errorMessage = 'Bir hata oluştu' + err.error.message
+    } else {
+      errorMessage = 'Sistemsel bir hata'
     }
     return throwError(errorMessage);
   }

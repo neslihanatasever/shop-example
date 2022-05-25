@@ -11,6 +11,7 @@ import {ProductFilterPipe} from './product/product-filter.pipe';
 import {AlertifyService} from "./services/alertify.service";
 import {HttpClientModule} from "@angular/common/http";
 import {CategoryService} from "./services/category.service";
+import { ProductAddForms1Component } from './product/product-add-forms1/product-add-forms1.component';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import {CategoryService} from "./services/category.service";
     NavComponent,
     CategoryComponent,
     ProductComponent,
-    ProductFilterPipe
+    ProductFilterPipe,
+    ProductAddForms1Component
   ],
   imports: [
     BrowserModule,
