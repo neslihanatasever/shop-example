@@ -15,9 +15,8 @@
           aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
   <div class="navbar-nav">
     <div class="nav-item text-nowrap">
-      <a class="nav-link px-3"
-         href="https://getbootstrap-com.translate.goog/docs/5.2/examples/dashboard/?_x_tr_sl=en&amp;_x_tr_tl=tr&amp;_x_tr_hl=tr&amp;_x_tr_pto=sc#">Sign
-        out</a>
+      <a *ngIf="isLoggedin()==false" class="nav-link" routerLink="/login">Login</a>
+      <a *ngIf="isLoggedin()==true" (click)="logOut()" class="nav-link" >LogOut</a>
     </div>
   </div>
 </header>
